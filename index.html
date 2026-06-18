@@ -82,19 +82,18 @@
   }
 
   :root{
-    --ink:#16241f;
-    --midnight:#16242b;
-    --teal:#2c7a6d;
-    --teal-deep:#1d5a50;
-    --clay:#9a4f3e;
-    --paper:#fbf7ee;
-    --paper-deep:#f1e9d7;
-    --mint:#eaf3ed;
-    --white:#fffdf8;
-    --line:rgba(22,36,33,0.16);
-    --line-soft:rgba(22,36,33,0.09);
-    --muted:rgba(22,36,33,0.62);
-    --muted-on-dark:rgba(255,255,255,0.72);
+    --ink:#1a1815;
+    --midnight:#1f4d45;
+    --teal:#3dbfa3;
+    --teal-deep:#1f4d45;
+    --clay:#b63a32;
+    --paper:#faf6f0;
+    --paper-deep:#e6dbcc;
+    --mint:#ccf5dd;
+    --white:#ffffff;
+    --line:rgba(26,24,21,0.14);
+    --line-soft:rgba(26,24,21,0.08);
+    --muted:rgba(26,24,21,0.6);
     --max:880px;
   }
 
@@ -120,7 +119,7 @@
   h1,h2,h3{
     font-family:'Delvona',Georgia,serif;
     font-weight:500;
-    color:var(--midnight);
+    color:var(--ink);
     margin:0;
     letter-spacing:-0.01em;
   }
@@ -148,8 +147,7 @@
 
   /* ---------- header ---------- */
   header.hero{padding:72px 0 56px;}
-  header.hero .eyebrow{display:flex; align-items:center; gap:10px;}
-  header.hero .eyebrow::before{content:"";width:28px;height:1px;background:var(--teal-deep);display:inline-block;}
+
 
   .hero-lede{
     max-width:620px;
@@ -284,7 +282,7 @@
   .stat .v{
     font-family:'Delvona',serif;
     font-size:1.2rem;
-    color:var(--midnight);
+    color:#1f4d45;
     line-height:1.25;
   }
 
@@ -367,27 +365,13 @@
   .cta-examples{margin-top:10px; font-size:0.97rem; color:var(--teal-deep); font-weight:600;}
   .cta-examples span:not(:last-child)::after{content:" · "; color:var(--line); font-weight:400;}
 
-  /* hubspot — single dark panel, no nested boxes */
+  /* hubspot / gong engage — single light tinted panel, no knockout text, no nested boxes */
   .panel{
-    background:var(--midnight);
-    color:#fff;
+    background:#f3ede4;
     border-radius:18px;
     padding:clamp(32px,5vw,52px);
     margin-top:8px;
   }
-  .panel h2, .panel h3{color:#fff;}
-  .panel .section-intro{color:var(--muted-on-dark);}
-  .panel .stat-strip,
-  .panel .pairing,
-  .panel .def-rows{border-color:rgba(255,255,255,0.18);}
-  .panel .stat{border-left-color:rgba(255,255,255,0.18);}
-  .panel .stat .k{color:var(--muted-on-dark);}
-  .panel .stat .v{color:#fff;}
-  .panel h4.sub{color:var(--muted-on-dark);}
-  .panel .cols-2::before{background:rgba(255,255,255,0.18);}
-  .panel ul.flat-check li{border-bottom-color:rgba(255,255,255,0.12); color:rgba(255,255,255,0.86);}
-  .panel ul.flat-check li::before{color:#8fd9c8;}
-  .panel p{color:rgba(255,255,255,0.82);}
 
   .flat-check{list-style:none; padding-left:0;}
   .flat-check li{
@@ -413,14 +397,14 @@
     background:var(--white);
   }
   .mock-head{
-    background:var(--midnight);
-    color:#fff;
+    background:var(--paper-deep);
+    border-bottom:1px solid var(--line);
     padding:18px 22px;
     font-size:0.92rem;
   }
-  .mock-head div{margin-bottom:6px; color:rgba(255,255,255,0.82);}
+  .mock-head div{margin-bottom:6px; color:var(--muted);}
   .mock-head div:last-child{margin-bottom:0;}
-  .mock-head strong{color:#fff;}
+  .mock-head strong{color:var(--ink);}
   .mock-body{padding:26px;}
   .mock-body ul{margin:14px 0;}
   .cta-btn{
@@ -428,7 +412,7 @@
     margin-top:8px;
     text-decoration:none;
     background:var(--teal);
-    color:#fff;
+    color:var(--ink);
     font-weight:700;
     font-size:0.93rem;
     padding:11px 18px;
@@ -453,10 +437,10 @@
 
   .print-btn{
     position:fixed; right:22px; bottom:22px; z-index:10;
-    border:0; background:var(--midnight); color:#fff;
+    border:0; background:var(--teal); color:var(--ink);
     border-radius:999px; padding:12px 18px;
     font-weight:700; font-size:0.86rem; cursor:pointer;
-    box-shadow:0 12px 28px rgba(22,36,33,0.22);
+    box-shadow:0 12px 28px rgba(26,24,21,0.22);
   }
 
   @media (max-width:760px){
@@ -471,8 +455,7 @@
   @media print{
     body{background:#fff;}
     nav.subnav, .print-btn{display:none;}
-    .panel{background:#fff !important; color:var(--ink) !important; border:1px solid var(--line);}
-    .panel h2,.panel h3,.panel p,.panel li{color:var(--ink) !important;}
+    .panel{border:1px solid var(--line);}
   }
 </style>
 </head>
@@ -501,8 +484,9 @@
     <a href="#preheaders">Preheaders</a>
     <a href="#body-copy">Body copy</a>
     <a href="#voice-tone">Voice &amp; tone</a>
-    <a href="#hubspot">HubSpot</a>
     <a href="#examples">Examples</a>
+    <a href="#hubspot">HubSpot</a>
+    <a href="#gong-engage">Gong Engage</a>
     <a href="#checklist">Checklist</a>
   </div>
 </nav>
@@ -700,8 +684,49 @@
         </div>
       </section>
 
-      <section id="hubspot">
+      <section id="examples">
         <span class="num">05</span>
+        <div class="section-head">
+          <h2>Email examples</h2>
+          <p class="section-intro">Use these as models for structure, tone, and field pairing.</p>
+        </div>
+
+        <div class="block cols-2">
+          <article class="mock">
+            <div class="mock-head">
+              <div><strong>Subject:</strong> More usable data. Less time digging.</div>
+              <div><strong>Preheader:</strong> Make firm data easier to search, understand, and act on.</div>
+            </div>
+            <div class="mock-body">
+              <p>From intake to billing to reporting, data sits behind every part of the practice. CARET makes that information easier to search, understand, and act on, so your firm can turn daily work into better decisions.</p>
+              <p>With CARET Command, your team can:</p>
+              <ul>
+                <li>Spot billing and productivity trends faster.</li>
+                <li>See where work, time, and revenue need attention.</li>
+                <li>Review firm performance from one connected dashboard.</li>
+              </ul>
+              <p>See what needs attention before it needs intervention.</p>
+              <a class="cta-btn" href="#">Explore CARET Command</a>
+            </div>
+          </article>
+
+          <article class="mock">
+            <div class="mock-head">
+              <div><strong>Subject:</strong> Plan your Outlook sync move</div>
+              <div><strong>Preheader:</strong> Please reach out before July 13 so there's time to plan the move.</div>
+            </div>
+            <div class="mock-body">
+              <p>Outlook sync changes take effect July 13. To avoid disruption, your firm will need to move to the updated sync experience before that date.</p>
+              <p>Our team can help you review timing, answer questions, and make sure the transition is planned before sync is affected.</p>
+              <p>Prefer to talk it through? Please reach out before July 13 so there's time to plan the move.</p>
+              <a class="cta-btn" href="#">Contact our team</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="hubspot">
+        <span class="num">06</span>
         <div class="panel">
           <div class="section-head">
             <h2>HubSpot setup</h2>
@@ -761,49 +786,71 @@
         </div>
       </section>
 
-      <section id="examples">
-        <span class="num">06</span>
-        <div class="section-head">
-          <h2>Email examples</h2>
-          <p class="section-intro">Use these as models for structure, tone, and field pairing.</p>
-        </div>
+      <section id="gong-engage">
+        <span class="num">07</span>
+        <div class="panel">
+          <div class="section-head">
+            <h2>Gong Engage setup</h2>
+            <p class="section-intro">Sales sequences ("flows") go out through Gong Engage. The same CARET voice rules apply, plus a few habits that protect deliverability and reply rates.</p>
+          </div>
 
-        <div class="block cols-2">
-          <article class="mock">
-            <div class="mock-head">
-              <div><strong>Subject:</strong> More usable data. Less time digging.</div>
-              <div><strong>Preheader:</strong> Make firm data easier to search, understand, and act on.</div>
+          <div class="block">
+            <div class="stat-strip">
+              <div class="stat"><div class="k">Manual vs. automatic</div><div class="v">Manual steps win on opens, clicks, and replies</div></div>
+              <div class="stat"><div class="k">Best send window</div><div class="v">Afternoons outperform mornings</div></div>
+              <div class="stat"><div class="k">Reply behavior</div><div class="v">A reply pauses the flow automatically</div></div>
+              <div class="stat"><div class="k">Volume</div><div class="v">Gong paces sends — don't try to outrun it</div></div>
             </div>
-            <div class="mock-body">
-              <p>From intake to billing to reporting, data sits behind every part of the practice. CARET makes that information easier to search, understand, and act on, so your firm can turn daily work into better decisions.</p>
-              <p>With CARET Command, your team can:</p>
-              <ul>
-                <li>Spot billing and productivity trends faster.</li>
-                <li>See where work, time, and revenue need attention.</li>
-                <li>Review firm performance from one connected dashboard.</li>
+          </div>
+
+          <div class="block cols-2 ruled">
+            <div>
+              <h4 class="sub">Setup &amp; QA</h4>
+              <ul class="flat-check">
+                <li>Flow matches the audience and goal before contacts are added.</li>
+                <li>Approved template used as the starting point, then personalized by hand.</li>
+                <li>Personalization variables have fallback text before any automatic step runs.</li>
+                <li>"Send on weekends" left off unless there's a clear reason to use it.</li>
+                <li>Flagged to-dos — missing variable, broken thread, disconnected inbox — reviewed before resending.</li>
+                <li>Unsubscribe link present on every flow email.</li>
+                <li>A reply is read in full before resuming the flow or pausing it for the rest of the account.</li>
               </ul>
-              <p>See what needs attention before it needs intervention.</p>
-              <a class="cta-btn" href="#">Explore CARET Command</a>
             </div>
-          </article>
+            <div>
+              <h4 class="sub">Platform notes</h4>
+              <p><strong>Manual vs. automatic steps.</strong> Automatic emails send without review unless something's wrong, which works for early, low-stakes touches. Reserve manual sends for the steps that carry the most weight — they consistently get better engagement.</p>
+              <p><strong>Replies.</strong> Gong pauses the flow the moment someone replies and hands you a to-do. Decide there whether to resume it or pause it for the rest of that account.</p>
+              <p><strong>Templates.</strong> Start from the approved flow template so structure and voice stay consistent across reps, then personalize before sending.</p>
+            </div>
+          </div>
 
-          <article class="mock">
-            <div class="mock-head">
-              <div><strong>Subject:</strong> Plan your Outlook sync move</div>
-              <div><strong>Preheader:</strong> Please reach out before July 13 so there's time to plan the move.</div>
+          <div class="block word-cols">
+            <div class="col-more">
+              <h4 class="sub">Use more of this</h4>
+              <ul>
+                <li>One clear next step per email</li>
+                <li>Real personalization, with fallback text set</li>
+                <li>Manual review on any step that matters</li>
+                <li>Afternoon send windows where possible</li>
+                <li>Reading the reply before re-engaging the account</li>
+              </ul>
             </div>
-            <div class="mock-body">
-              <p>Outlook sync changes take effect July 13. To avoid disruption, your firm will need to move to the updated sync experience before that date.</p>
-              <p>Our team can help you review timing, answer questions, and make sure the transition is planned before sync is affected.</p>
-              <p>Prefer to talk it through? Please reach out before July 13 so there's time to plan the move.</p>
-              <a class="cta-btn" href="#">Contact our team</a>
+            <div class="col-less">
+              <h4 class="sub">Use less of this</h4>
+              <ul>
+                <li>"I left you a voicemail" / "I've tried reaching you"</li>
+                <li>Leading with an ROI statistic</li>
+                <li>Asking "what are your thoughts?" to bait a reply</li>
+                <li>Generic bump-style nudges</li>
+                <li>Automatic sends on steps that actually matter</li>
+              </ul>
             </div>
-          </article>
+          </div>
         </div>
       </section>
 
       <section id="checklist">
-        <span class="num">07</span>
+        <span class="num">08</span>
         <div class="section-head">
           <h2>Final review</h2>
           <p class="section-intro">Confirm the email meets CARET copy standards and HubSpot QA standards before it sends.</p>
@@ -826,6 +873,7 @@
           </ul>
         </div>
       </section>
+
 
     </div>
   </div>
